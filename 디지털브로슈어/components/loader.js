@@ -12,7 +12,7 @@ const Loader = {
         const section = document.createElement('section');
         section.id = chapter.id;
         section.className = 'chapter';
-        section.innerHTML = html;
+        section.innerHTML = html; // HTML files are project-owned; safe for this use case
         Loader._bind(section, data);
         section.dataset.config = JSON.stringify(data);
         main.appendChild(section);
@@ -35,7 +35,7 @@ const Loader = {
     // data-bg="key" → background-image 설정
     el.querySelectorAll('[data-bg]').forEach(node => {
       const value = Loader._get(data, node.dataset.bg);
-      if (value) node.style.backgroundImage = `url('${value}')`;
+      if (value !== undefined) node.style.backgroundImage = `url('${CSS.escape(value)}')`;
     });
   },
 
