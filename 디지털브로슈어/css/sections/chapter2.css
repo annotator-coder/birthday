@@ -1,0 +1,3 @@
+#chapter2 .hero { background: #0A2540; }
+#chapter2 .tab-section__tab.active { border-color: var(--color-teal); }
+#chapter2 .tab-section__tab-icon { background: var(--color-teal); }

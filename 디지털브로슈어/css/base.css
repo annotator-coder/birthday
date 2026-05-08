@@ -114,3 +114,18 @@ body {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  .tab-section {
+    grid-template-columns: 1fr;
+  }
+  .tab-section__sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+  .tab-section__tab-info { display: none; }
+  .expand-cards { grid-template-columns: 1fr; }
+  .bubble-stat { flex-direction: column; gap: 2rem; }
+  .nav-chapters li { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+}
