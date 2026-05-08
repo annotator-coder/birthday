@@ -30,6 +30,15 @@ const Loader = {
       if (tabSection && tabContainer) TabSection.render(tabContainer, tabSection);
     }
 
+    // Chapter 4: render expand cards
+    const ch4 = document.getElementById('chapter4');
+    if (ch4) {
+      const data = JSON.parse(ch4.dataset.config);
+      const cardSection = data.sections.find(s => s.type === 'expand-card');
+      const cardContainer = ch4.querySelector('#ch4-social-cards');
+      if (cardSection && cardContainer) ExpandCard.render(cardContainer, cardSection);
+    }
+
     // 첫 챕터 활성화
     const first = main.querySelector('.chapter');
     if (first) first.classList.add('active');

@@ -106,3 +106,103 @@
   color: var(--color-text-muted);
   margin-top: 0.25rem;
 }
+
+/* === Expand Card === */
+.expand-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 500px;
+}
+
+.expand-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+  min-height: 400px;
+}
+
+.expand-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.expand-card:hover .expand-card__bg { transform: scale(1.05); }
+
+.expand-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+}
+
+.expand-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  color: var(--color-white);
+}
+
+.expand-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+}
+
+.expand-card__summary {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.expand-card__detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-top: 1rem;
+}
+
+.expand-card.expanded .expand-card__detail {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.expand-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  transition: var(--transition);
+  background: transparent;
+  cursor: pointer;
+}
+
+.expand-card.expanded .expand-card__btn {
+  background: var(--color-green);
+  color: var(--color-navy);
+  transform: rotate(45deg);
+}
+
+.expand-card__stat {
+  font-size: 0.8125rem;
+  margin-top: 0.75rem;
+  opacity: 0.9;
+}
+
+.expand-card__stat-value {
+  font-family: var(--font-en);
+  font-size: 2rem;
+  color: var(--color-green);
+}

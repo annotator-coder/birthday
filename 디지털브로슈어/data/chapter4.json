@@ -3,5 +3,45 @@
   "tag": "Social Plus",
   "title": "더불어 성장하다",
   "heroImage": "assets/images/ch4-hero.jpg",
-  "sections": []
+  "sections": [
+    {
+      "id": "4-1",
+      "title": "사회공헌활동",
+      "type": "expand-card",
+      "cards": [
+        {
+          "id": "yewulmaru",
+          "title": "GS칼텍스 예울마루",
+          "summary": "100만 명이 찾은 문화예술의 성지 '예울마루'와 예술 창작 터전이자 힐링공간 '장도'",
+          "detail": "클래식, 오페라, 뮤지컬, 콘서트 등 최첨단 음향과 무대시설을 갖추고 수준 높은 콘텐츠를 선보이며 전남 최고의 문화예술 랜드마크로 자리잡고 있습니다.",
+          "image": "assets/images/yewulmaru.jpg",
+          "stats": [
+            { "label": "'예울마루' 누적 이용객 수 (2023년 기준)", "value": "129만명" },
+            { "label": "'예술의 섬 장도' 누적 방문객 수 (2023년 기준)", "value": "156만명" }
+          ]
+        },
+        {
+          "id": "maumtoktok",
+          "title": "마음톡톡",
+          "summary": "정서적 어려움을 겪고 있는 아동·청소년을 위한 집단 예술 치유 프로그램",
+          "detail": "교사를 위한 마음톡톡 매뉴얼 교육 지원, 직접 찾아가는 교실힐링, 저소득가정 아동 치유, 전남동부지역 위기청소년 치유, 여수 다문화가정 아동 치유 등 5개 프로그램을 운영합니다.",
+          "image": "assets/images/maumtoktok.jpg",
+          "stats": [
+            { "label": "'마음톡톡' 프로그램 수혜 아동 수 (2013~2023년)", "value": "28,530명" },
+            { "label": "2023년 수혜 아동 수", "value": "2,814명" }
+          ]
+        },
+        {
+          "id": "jiguToktok",
+          "title": "지구톡톡",
+          "summary": "일상 속 작은 행동변화를 제안하고, 환경문제 해결을 위한 친환경 사회공헌 캠페인",
+          "detail": "개방형 실리콘 빨대를 제작해 시민들에게 배포하며 '지구를 살리는 쉽고 즐거운 일상 속 습관'을 실천했습니다. '지구톡톡'은 다양한 친환경 활동 도구들이 캠페인 시즌제로 지속 확대될 예정입니다.",
+          "image": "assets/images/jigutoktok.jpg",
+          "stats": [
+            { "label": "'실리콘 빨대' SNS 참여자 수", "value": "4,033명" }
+          ]
+        }
+      ]
+    }
+  ]
 }
