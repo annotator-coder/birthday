@@ -3,5 +3,47 @@
   "tag": "Value Plus",
   "title": "글로벌 Value No.1으로 나아가다",
   "heroImage": "assets/images/ch2-hero.jpg",
-  "sections": []
+  "sections": [
+    {
+      "id": "2-1",
+      "title": "사업영역 소개",
+      "type": "tab-section",
+      "tabs": [
+        {
+          "id": "petroleum",
+          "abbr": "P",
+          "label": "Petroleum",
+          "labelKo": "정유",
+          "description": "하루 80만 배럴을 정제할 수 있는 원유정제시설, 등·경유 탈황시설과 국내 최대 중질유 분해시설 등 최첨단 자동화 생산설비에서 고품질의 석유제품을 생산하고 있습니다.",
+          "stats": [
+            { "label": "원유 정제 처리량", "value": "800,000", "unit": "bbl/day" },
+            { "label": "중질유 분해 처리량", "value": "275,000", "unit": "bbl/day" }
+          ]
+        },
+        {
+          "id": "petrochemicals",
+          "abbr": "C",
+          "label": "Petrochemicals",
+          "labelKo": "석유화학",
+          "description": "연간 90만 톤의 고품질 에틸렌을 생산할 수 있는 MFC와 세계적 규모의 방향족 생산능력을 갖추고 있으며, 독보적 기술력을 인정받은 우수한 품질의 폴리에틸렌과 폴리프로필렌, 복합수지를 생산하고 있습니다.",
+          "stats": [
+            { "label": "방향족", "value": "2,800,000", "unit": "ton/year" },
+            { "label": "올레핀", "value": "2,170,000", "unit": "ton/year" },
+            { "label": "폴리머", "value": "980,000", "unit": "ton/year" }
+          ]
+        },
+        {
+          "id": "lubricants",
+          "abbr": "L",
+          "label": "Lubricants",
+          "labelKo": "윤활유",
+          "description": "최첨단 수첨분해공법(HCR)으로 고품질 베이스오일을 생산해 국내외 자동차용·산업용 윤활유 제조사에 공급하고 있으며, 1969년부터 윤활유를 생산해 온 인천 윤활유 공장에서는 Kixx 제품을 생산하고 있습니다.",
+          "stats": [
+            { "label": "베이스오일", "value": "27,000", "unit": "bbl/day" },
+            { "label": "윤활유", "value": "9,000", "unit": "bbl/day" }
+          ]
+        }
+      ]
+    }
+  ]
 }

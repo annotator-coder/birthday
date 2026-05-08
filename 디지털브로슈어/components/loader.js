@@ -21,6 +21,15 @@ const Loader = {
       }
     }
 
+    // Chapter 2: render tab sections
+    const ch2 = document.getElementById('chapter2');
+    if (ch2) {
+      const data = JSON.parse(ch2.dataset.config);
+      const tabSection = data.sections.find(s => s.type === 'tab-section');
+      const tabContainer = ch2.querySelector('#ch2-business-tabs');
+      if (tabSection && tabContainer) TabSection.render(tabContainer, tabSection);
+    }
+
     // 첫 챕터 활성화
     const first = main.querySelector('.chapter');
     if (first) first.classList.add('active');
