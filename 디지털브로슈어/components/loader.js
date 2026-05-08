@@ -39,13 +39,26 @@ const Loader = {
       if (tabSection && tabContainer) TabSection.render(tabContainer, tabSection);
     }
 
-    // Chapter 4: render expand cards
+    // Chapter 3: render tab section
+    const ch3 = document.getElementById('chapter3');
+    if (ch3) {
+      const data = JSON.parse(ch3.dataset.config);
+      const tabSection = data.sections.find(s => s.type === 'tab-section');
+      const tabContainer = ch3.querySelector('#ch3-dx-tabs');
+      if (tabSection && tabContainer) TabSection.render(tabContainer, tabSection);
+    }
+
+    // Chapter 4: render expand cards (both sections)
     const ch4 = document.getElementById('chapter4');
     if (ch4) {
       const data = JSON.parse(ch4.dataset.config);
-      const cardSection = data.sections.find(s => s.type === 'expand-card');
-      const cardContainer = ch4.querySelector('#ch4-social-cards');
-      if (cardSection && cardContainer) ExpandCard.render(cardContainer, cardSection);
+      data.sections.forEach(section => {
+        if (section.type === 'expand-card') {
+          const id = section.id === '4-1' ? '#ch4-social-cards' : '#ch4-sports-cards';
+          const container = ch4.querySelector(id);
+          if (container) ExpandCard.render(container, section);
+        }
+      });
     }
 
     // 첫 챕터 활성화
