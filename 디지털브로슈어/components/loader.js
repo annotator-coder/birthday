@@ -64,6 +64,9 @@ const Loader = {
     // 첫 챕터 활성화
     const first = main.querySelector('.chapter');
     if (first) first.classList.add('active');
+
+    // Initialize counter animations after all sections are rendered
+    StatCounter.initAll();
   },
 
   // data-bind="key.nested" → data 객체에서 값을 찾아 textContent 설정
@@ -75,7 +78,7 @@ const Loader = {
     // data-bg="key" → background-image 설정
     el.querySelectorAll('[data-bg]').forEach(node => {
       const value = Loader._get(data, node.dataset.bg);
-      if (value !== undefined) node.style.backgroundImage = `url('${CSS.escape(value)}')`;
+      if (value !== undefined) node.style.backgroundImage = `url('${value}')`;
     });
   },
 
