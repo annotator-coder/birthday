@@ -21,6 +21,15 @@ const Loader = {
       }
     }
 
+    // Chapter 1: render bar chart
+    const ch1 = document.getElementById('chapter1');
+    if (ch1) {
+      const data = JSON.parse(ch1.dataset.config);
+      const chartSection = data.sections.find(s => s.type === 'chart-section');
+      const canvas = ch1.querySelector('#ch1-bar-chart');
+      if (chartSection && canvas) ChartSection._create(canvas, chartSection.chart);
+    }
+
     // Chapter 2: render tab sections
     const ch2 = document.getElementById('chapter2');
     if (ch2) {

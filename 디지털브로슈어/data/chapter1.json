@@ -3,5 +3,23 @@
   "tag": "Heritage Plus",
   "title": "대한민국의 에너지 유산이 되다",
   "heroImage": "assets/images/ch1-hero.jpg",
-  "sections": []
+  "sections": [
+    {
+      "id": "1-1",
+      "title": "대한민국의 석유산업",
+      "type": "chart-section",
+      "description": "단일 정유공장 기준 세계 4위의 원유 정제시설과 국내 최대의 정유 고도화 시설을 갖춘 GS칼텍스는, 대한민국을 원유 수입국에서 정제능력 세계 5위(2023년 기준)의 국가로 끌어올리며 에너지 역사의 새로운 유산을 만들어가고 있습니다.",
+      "chart": {
+        "type": "bar",
+        "data": {
+          "labels": ["Paraguana\n(팔콘, 베네수엘라)", "SK에너지\n(울산)", "Abu Dhabi\n(루와이스)", "GS칼텍스\n(여수)", "S-OIL\n(울산)", "Reliance\n(잠나가르)"],
+          "datasets": [{
+            "label": "정제능력 (천 배럴/일)",
+            "data": [955, 840, 817, 800, 669, 663],
+            "backgroundColor": ["#37474F","#37474F","#37474F","#00C853","#37474F","#37474F"]
+          }]
+        }
+      }
+    }
+  ]
 }
