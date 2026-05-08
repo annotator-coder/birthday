@@ -10,6 +10,10 @@
   --color-text:       #1A1A1A;
   --color-text-muted: #666666;
 
+  --color-navy-rgb:  13, 27, 42;
+  --color-white-rgb: 255, 255, 255;
+  --color-green-rgb: 0, 200, 83;
+
   --font-ko: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   --font-en: 'Bebas Neue', 'Impact', sans-serif;
 
@@ -109,19 +113,4 @@ body {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .tab-section {
-    grid-template-columns: 1fr;
-  }
-  .tab-section__sidebar {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 1rem;
-  }
-  .tab-section__tab-info { display: none; }
-  .expand-cards { grid-template-columns: 1fr; }
-  .bubble-stat { flex-direction: column; gap: 2rem; }
-  .nav-chapters li { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
 }
