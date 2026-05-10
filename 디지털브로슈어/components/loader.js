@@ -66,8 +66,8 @@ const Loader = {
     if (first) first.classList.add('active');
 
     // Initialize counter animations after all sections are rendered
-    StatCounter.initAll();
     RevealObserver.init();
+    StatCounter.initAll();
   },
 
   // data-bind="key.nested" → data 객체에서 값을 찾아 textContent 설정
