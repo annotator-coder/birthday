@@ -5,22 +5,68 @@
     <h1 class="hero__title" data-bind="title"></h1>
   </div>
 </div>
+
+<!-- 사업영역 탭섹션 -->
 <div class="section-block">
-  <div class="section-block__header">
+  <div class="section-block__header reveal">
     <p class="section-block__tag">2 — [Value Plus]</p>
-    <h2 class="section-block__title">1. 사업영역 소개</h2>
+    <h2 class="section-block__title">사업영역 소개</h2>
   </div>
   <div id="ch2-business-tabs"></div>
 </div>
-<div id="ch2-station-stats" class="bubble-stat">
-  <div class="bubble-stat__item">
-    <div class="bubble-stat__value" data-count="2068">2,068</div>
-    <div class="bubble-stat__label">전국 주유소 개수</div>
-    <div class="bubble-stat__note">2024년 2월 기준</div>
+
+<!-- 세계 수출 맵 -->
+<section class="ch2-world">
+  <div class="ch2-world__header reveal">
+    <p class="ch2-world__tag">GLOBAL NETWORK</p>
+    <h2 class="ch2-world__headline"><span class="ch2-world__big">50</span>개국 수출</h2>
+    <p class="ch2-world__sub">10개국 13개 글로벌 거점 운영</p>
   </div>
-  <div class="bubble-stat__item">
-    <div class="bubble-stat__value" data-count="343">343</div>
-    <div class="bubble-stat__label">전국 충전소 개수</div>
-    <div class="bubble-stat__note">2024년 2월 기준</div>
+  <div class="ch2-world__map-wrap reveal" data-reveal-delay="200">
+    <svg class="ch2-world__svg" id="ch2-world-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <!-- 대륙 외곽선 (equirectangular 투영, 1000×500) -->
+      <path d="M120,60 L240,50 L270,100 L250,180 L220,220 L170,200 L130,160 L100,120Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M185,240 L250,235 L270,270 L260,370 L230,420 L195,390 L175,330 L175,280Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M455,55 L545,50 L570,90 L560,135 L490,148 L455,122Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M455,148 L560,138 L605,195 L592,345 L532,395 L470,362 L448,262 L453,188Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M540,28 L890,22 L905,92 L855,112 L725,102 L622,118 L570,90 L545,50Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M552,142 L685,132 L715,182 L682,222 L602,228 L568,192Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M642,162 L858,157 L905,202 L872,252 L812,272 L722,262 L682,232 L662,202Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <path d="M730,312 L882,307 L922,362 L902,432 L812,442 L752,402 L722,362Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <!-- JS로 location circle dots 주입 -->
+    </svg>
   </div>
-</div>
+  <div class="ch2-world__locations reveal" data-reveal-delay="400">
+    <span class="ch2-world__loc-item">🇬🇧 UK</span>
+    <span class="ch2-world__loc-item">🇷🇺 Russia</span>
+    <span class="ch2-world__loc-item">🇨🇿 Czech</span>
+    <span class="ch2-world__loc-item">🇮🇹 Italy</span>
+    <span class="ch2-world__loc-item">🇦🇪 UAE</span>
+    <span class="ch2-world__loc-item">🇮🇳 India</span>
+    <span class="ch2-world__loc-item">🇯🇵 Japan</span>
+    <span class="ch2-world__loc-item">🇨🇳 China</span>
+    <span class="ch2-world__loc-item">🇻🇳 Vietnam</span>
+    <span class="ch2-world__loc-item">🇸🇬 Singapore</span>
+  </div>
+</section>
+
+<!-- 핀드 스탯: 전국 네트워크 -->
+<section class="ch2-network">
+  <div class="ch2-network__inner">
+    <div class="ch2-network__item reveal" data-reveal-delay="0">
+      <div class="ch2-network__num">
+        <span class="stat-count" data-count="2068">2,068</span>
+      </div>
+      <div class="ch2-network__label">전국 주유소</div>
+      <div class="ch2-network__note">2024년 2월 기준</div>
+    </div>
+    <div class="ch2-network__divider"></div>
+    <div class="ch2-network__item reveal" data-reveal-delay="150">
+      <div class="ch2-network__num">
+        <span class="stat-count" data-count="343">343</span>
+      </div>
+      <div class="ch2-network__label">전국 충전소</div>
+      <div class="ch2-network__note">2024년 2월 기준</div>
+    </div>
+  </div>
+</section>

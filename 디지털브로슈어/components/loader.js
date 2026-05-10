@@ -30,13 +30,43 @@ const Loader = {
       if (chartSection && canvas) ChartSection._create(canvas, chartSection.chart);
     }
 
-    // Chapter 2: render tab sections
+    // Chapter 2: render tab sections + world map dots
     const ch2 = document.getElementById('chapter2');
     if (ch2) {
       const data = JSON.parse(ch2.dataset.config);
       const tabSection = data.sections.find(s => s.type === 'tab-section');
       const tabContainer = ch2.querySelector('#ch2-business-tabs');
       if (tabSection && tabContainer) TabSection.render(tabContainer, tabSection);
+
+      const worldMap = data.sections.find(s => s.type === 'world-map');
+      const mapSvg = ch2.querySelector('#ch2-world-map');
+      if (worldMap && mapSvg) {
+        const NS = 'http://www.w3.org/2000/svg';
+        worldMap.locations.forEach((loc, i) => {
+          const delay = `${i * 0.2}s`;
+
+          const ring = document.createElementNS(NS, 'circle');
+          ring.setAttribute('cx', loc.cx);
+          ring.setAttribute('cy', loc.cy);
+          ring.setAttribute('r', 6);
+          ring.setAttribute('class', 'ch2-map-dot-ring');
+          ring.style.animationDelay = delay;
+          mapSvg.appendChild(ring);
+
+          const circle = document.createElementNS(NS, 'circle');
+          circle.setAttribute('cx', loc.cx);
+          circle.setAttribute('cy', loc.cy);
+          circle.setAttribute('r', 5);
+          circle.setAttribute('class', 'ch2-map-dot');
+          circle.style.animationDelay = delay;
+
+          const title = document.createElementNS(NS, 'title');
+          title.textContent = `${loc.city}, ${loc.country}`;
+          circle.appendChild(title);
+
+          mapSvg.appendChild(circle);
+        });
+      }
     }
 
     // Chapter 3: render tab section

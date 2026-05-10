@@ -46,12 +46,21 @@
       ]
     },
     {
-      "id": "2-5",
-      "title": "전국 주유소와 충전소",
-      "type": "bubble-stat",
-      "stats": [
-        { "label": "전국 주유소 개수", "value": "2,068", "note": "2024년 2월 기준" },
-        { "label": "전국 충전소 개수", "value": "343", "note": "2024년 2월 기준" }
+      "id": "2-6",
+      "type": "world-map",
+      "headline": "50개국 수출",
+      "subline": "10개국 13개 거점",
+      "locations": [
+        { "city": "London",      "country": "UK",        "cx": 500, "cy": 107 },
+        { "city": "Prague",      "country": "Czech",     "cx": 540, "cy": 111 },
+        { "city": "Rome",        "country": "Italy",     "cx": 535, "cy": 133 },
+        { "city": "Moscow",      "country": "Russia",    "cx": 604, "cy": 95  },
+        { "city": "Dubai",       "country": "UAE",       "cx": 654, "cy": 180 },
+        { "city": "Mumbai",      "country": "India",     "cx": 702, "cy": 197 },
+        { "city": "Shanghai",    "country": "China",     "cx": 838, "cy": 163 },
+        { "city": "Tokyo",       "country": "Japan",     "cx": 888, "cy": 151 },
+        { "city": "Ho Chi Minh", "country": "Vietnam",   "cx": 796, "cy": 220 },
+        { "city": "Singapore",   "country": "Singapore", "cx": 788, "cy": 247 }
       ]
     }
   ]
