@@ -5,6 +5,26 @@
   "heroImage": "assets/images/ch1-hero.jpg",
   "sections": [
     {
+      "id": "1-0",
+      "type": "timeline",
+      "milestones": [
+        { "year": "1967", "event": "GS칼텍스 창립", "desc": "호남정유로 출발, 대한민국 정유산업의 시작" },
+        { "year": "1969", "event": "여수공장 가동", "desc": "전남 여수에 국내 최초 대규모 정유설비 준공" },
+        { "year": "1971", "event": "내수 첫 공급", "desc": "국산 석유제품 전국 공급망 구축" },
+        { "year": "1987", "event": "중질유 분해시설 준공", "desc": "국내 최대 중질유 분해·처리 시설 가동" },
+        { "year": "1995", "event": "인천 윤활유공장 가동", "desc": "HCR 공법 기반 고품질 베이스오일 생산 시작" },
+        { "year": "1999", "event": "IMF 위기 극복", "desc": "구조조정과 혁신으로 재도약의 발판 마련" },
+        { "year": "2001", "event": "GS칼텍스로 사명 변경", "desc": "GS그룹 출범과 함께 새 브랜드 아이덴티티 확립" },
+        { "year": "2005", "event": "방향족 세계 최대급", "desc": "파라자일렌 등 방향족 생산능력 세계 최고 수준 달성" },
+        { "year": "2010", "event": "MFC 준공", "desc": "연간 90만 톤 에틸렌 생산 가능 혼합분해시설 완공" },
+        { "year": "2015", "event": "그린에너지 전환 선언", "desc": "신재생·저탄소 에너지 중심의 미래 전략 공표" },
+        { "year": "2019", "event": "Deep Transformation 선언", "desc": "BX·DX·GX 3대 혁신 축 기반 경영 전략 발표" },
+        { "year": "2021", "event": "ISCC PLUS 인증 획득", "desc": "바이오 기반 원료 지속가능성 국제 인증 취득" },
+        { "year": "2023", "event": "정제능력 세계 4위", "desc": "단일 공장 기준 세계 4위 정제시설 지위 확인" },
+        { "year": "2025", "event": "NCSI 17년 연속 1위", "desc": "국가고객만족도 주유소 부문 최장 기간 1위 달성" }
+      ]
+    },
+    {
       "id": "1-1",
       "title": "대한민국의 석유산업",
       "type": "chart-section",
@@ -12,12 +32,32 @@
       "chart": {
         "type": "bar",
         "data": {
-          "labels": ["Paraguana\n(팔콘, 베네수엘라)", "SK에너지\n(울산)", "Abu Dhabi\n(루와이스)", "GS칼텍스\n(여수)", "S-OIL\n(울산)", "Reliance\n(잠나가르)"],
+          "labels": ["Paraguana\n(베네수엘라)", "SK에너지\n(울산)", "Abu Dhabi\n(루와이스)", "GS칼텍스\n(여수)", "S-OIL\n(울산)", "Reliance\n(잠나가르)"],
           "datasets": [{
             "label": "정제능력 (천 배럴/일)",
             "data": [955, 840, 817, 800, 669, 663],
-            "backgroundColor": ["#37474F","#37474F","#37474F","#00C853","#37474F","#37474F"]
+            "backgroundColor": ["#CFD8DC","#CFD8DC","#CFD8DC","#00C853","#CFD8DC","#CFD8DC"],
+            "hoverBackgroundColor": ["#B0BEC5","#B0BEC5","#B0BEC5","#00E676","#B0BEC5","#B0BEC5"],
+            "borderRadius": 6,
+            "borderSkipped": false,
+            "barThickness": 28
           }]
+        },
+        "options": {
+          "scales": {
+            "x": {
+              "grid": { "display": false },
+              "border": { "display": false },
+              "ticks": { "color": "#888", "font": { "size": 11 }, "maxRotation": 0 }
+            },
+            "y": {
+              "beginAtZero": true,
+              "max": 1100,
+              "grid": { "color": "rgba(0,0,0,0.05)", "drawTicks": false },
+              "border": { "display": false },
+              "ticks": { "color": "#aaa", "font": { "size": 11 }, "padding": 12, "stepSize": 200 }
+            }
+          }
         }
       }
     }

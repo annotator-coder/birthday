@@ -5,13 +5,139 @@
     <h1 class="hero__title" data-bind="title"></h1>
   </div>
 </div>
-<div class="section-block">
-  <div class="section-block__header">
-    <p class="section-block__tag">1 — [Heritage Plus]</p>
-    <h2 class="section-block__title">1. 대한민국의 석유산업</h2>
-    <p class="section-block__desc" data-bind="sections.0.description"></p>
+
+<!-- 성장 타임라인 -->
+<section class="ch1-timeline">
+  <div class="section-block">
+    <div class="section-block__header reveal">
+      <p class="section-block__tag">1 — [Heritage Plus]</p>
+      <h2 class="section-block__title">반세기를 넘어온 여정</h2>
+    </div>
+    <div class="ch1-timeline__track">
+      <div class="ch1-timeline__item reveal" data-reveal-delay="0">
+        <div class="ch1-timeline__year">1967</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>GS칼텍스 창립</strong>
+          <p>호남정유로 출발, 대한민국 정유산업의 시작</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="80">
+        <div class="ch1-timeline__year">1969</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>여수공장 가동</strong>
+          <p>전남 여수에 국내 최초 대규모 정유설비 준공</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="160">
+        <div class="ch1-timeline__year">1971</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>내수 첫 공급</strong>
+          <p>국산 석유제품 전국 공급망 구축</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="240">
+        <div class="ch1-timeline__year">1987</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>중질유 분해시설 준공</strong>
+          <p>국내 최대 중질유 분해·처리 시설 가동</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="320">
+        <div class="ch1-timeline__year">1995</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>인천 윤활유공장 가동</strong>
+          <p>HCR 공법 기반 고품질 베이스오일 생산 시작</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="400">
+        <div class="ch1-timeline__year">2001</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>GS칼텍스로 사명 변경</strong>
+          <p>GS그룹 출범과 함께 새 브랜드 아이덴티티 확립</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="480">
+        <div class="ch1-timeline__year">2010</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>MFC 준공</strong>
+          <p>연간 90만 톤 에틸렌 생산 가능 혼합분해시설 완공</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="560">
+        <div class="ch1-timeline__year">2019</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>Deep Transformation 선언</strong>
+          <p>BX·DX·GX 3대 혁신 축 기반 경영 전략 발표</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="640">
+        <div class="ch1-timeline__year">2023</div>
+        <div class="ch1-timeline__dot"></div>
+        <div class="ch1-timeline__body">
+          <strong>정제능력 세계 4위</strong>
+          <p>단일 공장 기준 세계 4위 정제시설 지위 확인</p>
+        </div>
+      </div>
+      <div class="ch1-timeline__item reveal" data-reveal-delay="720">
+        <div class="ch1-timeline__year">2025</div>
+        <div class="ch1-timeline__dot ch1-timeline__dot--current"></div>
+        <div class="ch1-timeline__body">
+          <strong>NCSI 17년 연속 1위</strong>
+          <p>국가고객만족도 주유소 부문 최장 기간 1위 달성</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="chart-section">
+</section>
+
+<!-- 여수공장 인포그래픽 -->
+<section class="ch1-factory">
+  <div class="ch1-factory__inner">
+    <div class="ch1-factory__header reveal">
+      <p class="ch1-factory__tag">YEOSU COMPLEX</p>
+      <h2 class="ch1-factory__title">세계가 주목하는<br>여수 에너지 복합단지</h2>
+    </div>
+    <div class="ch1-factory__grid">
+      <div class="ch1-factory__stat reveal" data-reveal-delay="0">
+        <div class="ch1-factory__num"><span class="stat-count" data-count="800000">800,000</span></div>
+        <div class="ch1-factory__unit">bbl/day</div>
+        <div class="ch1-factory__label">원유 정제 처리량</div>
+      </div>
+      <div class="ch1-factory__stat reveal" data-reveal-delay="120">
+        <div class="ch1-factory__num"><span class="stat-count" data-count="275000">275,000</span></div>
+        <div class="ch1-factory__unit">bbl/day</div>
+        <div class="ch1-factory__label">중질유 분해 처리량</div>
+      </div>
+      <div class="ch1-factory__stat reveal" data-reveal-delay="240">
+        <div class="ch1-factory__num"><span class="stat-count" data-count="325">325</span><span class="ch1-factory__suffix">기</span></div>
+        <div class="ch1-factory__unit">&nbsp;</div>
+        <div class="ch1-factory__label">제품 저장 탱크</div>
+      </div>
+      <div class="ch1-factory__stat reveal" data-reveal-delay="360">
+        <div class="ch1-factory__num"><span class="stat-count" data-count="100000">100,000</span></div>
+        <div class="ch1-factory__unit">kW</div>
+        <div class="ch1-factory__label">자체 발전 능력</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 정제능력 순위 차트 -->
+<div class="section-block">
+  <div class="section-block__header reveal">
+    <p class="section-block__tag">1 — [Heritage Plus]</p>
+    <h2 class="section-block__title">대한민국의 석유산업</h2>
+    <p class="section-block__desc" data-bind="sections.1.description"></p>
+  </div>
+  <div class="chart-section reveal">
     <div class="chart-section__canvas-wrap">
       <canvas id="ch1-bar-chart"></canvas>
     </div>
