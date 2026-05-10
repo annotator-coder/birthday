@@ -1,3 +1,201 @@
 #chapter3 .hero { background: #0D1B2A; }
 #chapter3 .tab-section__sidebar { background: #101828; }
 #chapter3 .tab-section__tab-icon { background: var(--color-green); }
+
+/* DAX 카드 섹션 */
+.ch3-dax {
+  background: var(--color-navy);
+  padding: 80px 5%;
+}
+
+.ch3-dax__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ch3-dax__tag {
+  font-family: var(--font-en);
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.ch3-dax__title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 3rem;
+}
+
+.ch3-dax__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.ch3-dax__card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.ch3-dax__card:hover {
+  border-color: rgba(0,200,83,0.4);
+  background: rgba(0,200,83,0.05);
+}
+
+.ch3-dax__icon {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.ch3-dax__card-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.ch3-dax__card-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Green Transformation */
+.ch3-green {
+  background: #F8F9FA;
+  padding: 80px 5%;
+}
+
+.ch3-green__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ch3-green__tag {
+  font-family: var(--font-en);
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  color: var(--color-green-dark);
+  margin-bottom: 1rem;
+}
+
+.ch3-green__title {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.3;
+  margin-bottom: 3.5rem;
+}
+
+.ch3-green__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.ch3-green__stat {
+  border-top: 3px solid var(--color-green);
+  padding-top: 1.5rem;
+}
+
+.ch3-green__num {
+  font-family: var(--font-en);
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--color-navy);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.ch3-green__decimal {
+  font-size: 0.6em;
+  opacity: 0.7;
+}
+
+.ch3-green__unit {
+  font-size: 0.5em;
+  color: var(--color-green-dark);
+}
+
+.ch3-green__label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+}
+
+.ch3-green__note {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.ch3-green__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-green);
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+}
+
+/* YouTube 영상 */
+.ch3-video {
+  background: var(--color-white);
+  padding: 80px 5%;
+}
+
+.ch3-video__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ch3-video__tag {
+  font-family: var(--font-en);
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.ch3-video__title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 2.5rem;
+}
+
+.ch3-video__embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+}
+
+.ch3-video__embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ch3-video__caption {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .ch3-dax__grid { grid-template-columns: repeat(2, 1fr); }
+  .ch3-green__stats { grid-template-columns: 1fr; }
+}
