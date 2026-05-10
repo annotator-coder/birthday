@@ -33,10 +33,23 @@ const ChartSection = {
 
   _create(canvas, config) {
     if (!window.Chart) { console.warn('[ChartSection] Chart.js not loaded'); return; }
+    const configOpts = config.options || {};
+    const options = {
+      ...ChartSection._defaults,
+      ...configOpts,
+      plugins: {
+        ...ChartSection._defaults.plugins,
+        ...(configOpts.plugins || {}),
+      },
+      scales: {
+        ...ChartSection._defaults.scales,
+        ...(configOpts.scales || {}),
+      },
+    };
     new Chart(canvas, {
       type: config.type || 'bar',
       data: config.data,
-      options: { ...ChartSection._defaults, ...(config.options || {}) },
+      options,
     });
   },
 
