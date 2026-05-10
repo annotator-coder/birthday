@@ -1,5 +1,5 @@
-#chapter3 .hero { background: #0D1B2A; }
-#chapter3 .tab-section__sidebar { background: #101828; }
+#chapter3 .hero { background: var(--color-navy); }
+#chapter3 .tab-section__sidebar { background: var(--color-navy); }
 #chapter3 .tab-section__tab-icon { background: var(--color-green); }
 
 /* DAX 카드 섹션 */
@@ -35,16 +35,16 @@
 }
 
 .ch3-dax__card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(var(--color-white-rgb),0.05);
+  border: 1px solid rgba(var(--color-white-rgb),0.08);
   border-radius: 12px;
   padding: 2rem 1.5rem;
   transition: border-color var(--transition), background var(--transition);
 }
 
 .ch3-dax__card:hover {
-  border-color: rgba(0,200,83,0.4);
-  background: rgba(0,200,83,0.05);
+  border-color: rgba(var(--color-green-rgb),0.4);
+  background: rgba(var(--color-green-rgb),0.05);
 }
 
 .ch3-dax__icon {
@@ -67,7 +67,7 @@
 
 /* Green Transformation */
 .ch3-green {
-  background: #F8F9FA;
+  background: var(--color-light-bg);
   padding: 80px 5%;
 }
 
@@ -198,4 +198,8 @@
 @media (max-width: 768px) {
   .ch3-dax__grid { grid-template-columns: repeat(2, 1fr); }
   .ch3-green__stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .ch3-dax__grid { grid-template-columns: 1fr; }
 }
