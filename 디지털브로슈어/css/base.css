@@ -1,24 +1,68 @@
 /* css/base.css */
 :root {
+  /* === GS 브랜드 색상 (유지) === */
   --color-green:      #00C853;
   --color-green-dark: #00962D;
   --color-navy:       #0D1B2A;
   --color-teal:       #00897B;
   --color-purple:     #1A237E;
-  --color-light-bg:   #F5F5F5;
   --color-white:      #FFFFFF;
-  --color-text:       #1A1A1A;
-  --color-text-muted: #666666;
 
+  /* RGB 호환 변수 (nav.css·components.css에서 rgba()로 사용 중) */
   --color-navy-rgb:  13, 27, 42;
   --color-white-rgb: 255, 255, 255;
   --color-green-rgb: 0, 200, 83;
 
-  --font-ko: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-  --font-en: 'Bebas Neue', 'Impact', sans-serif;
+  /* === HIG 의미론적 색상 === */
+  --color-bg:             #FFFFFF;
+  --color-bg-secondary:   #F2F2F7;
+  --color-bg-card:        #FFFFFF;
+  --color-text:           #1C1C1E;
+  --color-text-secondary: #3C3C43;
+  --color-text-muted:     #8E8E93;
+  --color-separator:      #E5E5EA;
 
-  --nav-height: 64px;
-  --transition: 0.3s ease;
+  /* 하위 호환 별칭 — chapter2–4 CSS 변경 없이 HIG 색상 적용 */
+  --color-light-bg:  var(--color-bg-secondary);   /* 기존 #F5F5F5 → #F2F2F7 */
+
+  /* === 폰트 === */
+  --font-ko: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  /* 하위 호환 별칭 — chapter2–4의 var(--font-en) 참조가 Pretendard로 전환됨 */
+  --font-en: var(--font-ko);
+
+  /* === HIG 타이포그래피 스케일 === */
+  --text-large-title: 2.125rem;  /* 34pt */
+  --text-title1:      1.75rem;   /* 28pt */
+  --text-title2:      1.375rem;  /* 22pt */
+  --text-title3:      1.25rem;   /* 20pt */
+  --text-headline:    1.0625rem; /* 17pt */
+  --text-body:        1.0625rem; /* 17pt */
+  --text-callout:     1rem;      /* 16pt */
+  --text-subheadline: 0.9375rem; /* 15pt */
+  --text-footnote:    0.8125rem; /* 13pt */
+  --text-caption1:    0.75rem;   /* 12pt */
+
+  /* === HIG 모서리 반경 === */
+  --rounded-sm:   6px;
+  --rounded-md:   10px;
+  --rounded-lg:   13px;
+  --rounded-xl:   16px;
+  --rounded-full: 9999px;
+
+  /* === HIG 간격 (4pt 그리드) === */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* === 기타 === */
+  --nav-height: 52px;
+  --transition: 0.25s ease;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +72,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-ko);
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-bg);
   overflow-x: hidden;
 }
 
@@ -39,6 +83,7 @@ body {
 
 .chapter.active { display: block; }
 
+/* === Hero === */
 .hero {
   position: relative;
   width: 100%;
@@ -51,7 +96,6 @@ body {
   background: var(--color-navy);
 }
 
-/* Intro and outro keep fullscreen hero */
 #intro .hero,
 #outro .hero {
   height: 100vh;
@@ -75,49 +119,58 @@ body {
 }
 
 .hero__tag {
-  font-family: var(--font-en);
-  font-size: 1rem;
-  letter-spacing: 0.2em;
+  font-size: var(--text-caption1);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--color-green);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-3);
 }
 
 .hero__title {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: var(--text-large-title); /* HIG Large Title: 34pt */
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.18;
+  letter-spacing: -0.022em;
 }
 
+/* === Section Block === */
 .section-block {
-  padding: 80px 5%;
+  padding: var(--space-10) 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .section-block__header {
-  margin-bottom: 48px;
+  margin-bottom: var(--space-12);
 }
 
 .section-block__tag {
-  font-size: 0.875rem;
+  font-size: var(--text-caption1);
+  font-weight: 600;
   color: var(--color-text-muted);
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
 }
 
 .section-block__title {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: var(--text-title2); /* HIG Title 2: 22pt */
   font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.27;
   color: var(--color-navy);
 }
 
 .section-block__desc {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.8;
+  margin-top: var(--space-2);
+  font-size: var(--text-subheadline); /* HIG Subheadline: 15pt */
+  line-height: 1.6;
   color: var(--color-text-muted);
   max-width: 700px;
 }
 
+/* === 애니메이션 === */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -133,17 +186,17 @@ body {
   transform: none;
 }
 
+/* === 반응형 === */
 @media (max-width: 768px) {
-  .tab-section {
-    grid-template-columns: 1fr;
-  }
+  .tab-section { grid-template-columns: 1fr; }
   .tab-section__sidebar {
     flex-direction: row;
     overflow-x: auto;
-    padding: 1rem;
+    padding: var(--space-2);
   }
   .tab-section__tab-info { display: none; }
   .expand-cards { grid-template-columns: 1fr; }
   .bubble-stat { flex-direction: column; gap: 2rem; }
-  .nav-chapters li { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+  .nav-chapters { overflow-x: auto; }
+  .nav-chapters li { font-size: var(--text-caption1); padding: var(--space-1) var(--space-2); }
 }
