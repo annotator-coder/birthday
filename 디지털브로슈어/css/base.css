@@ -196,7 +196,7 @@ body {
   }
   .tab-section__tab-info { display: none; }
   .expand-cards { grid-template-columns: 1fr; }
-  .bubble-stat { flex-direction: column; gap: 2rem; }
+  .bubble-stat { flex-direction: column; gap: var(--space-8); }
   .nav-chapters { overflow-x: auto; }
   .nav-chapters li { font-size: var(--text-caption1); padding: var(--space-1) var(--space-2); }
 }
