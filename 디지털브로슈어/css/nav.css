@@ -42,11 +42,16 @@
   border-radius: 7px;
   font-size: var(--text-caption1); /* 12pt */
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   cursor: pointer;
   transition: var(--transition);
   text-align: center;
   white-space: nowrap;
+}
+
+.nav-chapters li:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
 }
 
 .nav-chapters li:hover {
@@ -79,9 +84,14 @@
   justify-content: center;
 }
 
+.nav-controls button:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
 #prev-btn {
   background: var(--color-separator);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 #next-btn {
