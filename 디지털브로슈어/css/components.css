@@ -202,7 +202,7 @@
 }
 
 .expand-card__stat-value {
-  font-family: var(--font-en);
+  font-family: var(--font-ko);
   font-size: 2rem;
   color: var(--color-green);
 }
@@ -235,7 +235,7 @@
 }
 
 .bubble-stat__value {
-  font-family: var(--font-en);
+  font-family: var(--font-ko);
   font-size: 3.5rem;
   line-height: 1;
   color: var(--color-white);
