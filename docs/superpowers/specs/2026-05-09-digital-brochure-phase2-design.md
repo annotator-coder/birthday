@@ -187,8 +187,10 @@ CSS (base.css에 추가):
   css/sections/chapter3.css
   index.html                        (scroll-reveal.js 스크립트 추가)
 
+소규모 수정:
+  sections/chapter4.html            (.reveal 클래스 추가만)
+
 유지:
-  sections/chapter4.html
   data/chapter4.json
   css/sections/chapter4.css
   components/loader.js
