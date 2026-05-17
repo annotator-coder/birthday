@@ -115,15 +115,15 @@ a   { color: inherit; text-decoration: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: currentColor;
+  background: var(--paper);
   transform: translateX(-100%);
   transition: transform 0.4s var(--ease-spring);
   z-index: -1;
 }
 .btn-editorial:hover::before { transform: translateX(0); }
+.btn-editorial:hover { color: var(--ink); }
+.section-light .btn-editorial::before { background: var(--ink); }
 .section-light .btn-editorial:hover { color: var(--paper); }
-.section-dark  .btn-editorial:hover,
-.section-teal  .btn-editorial:hover { color: var(--ink); }
 
 /* ─── Image editorial treatment ─────────────────────── */
 .img-editorial {
