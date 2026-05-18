@@ -283,7 +283,7 @@ img[src=""], img:not([src]) {
 
 .timeline-year {
   padding: 28px 20px 28px 80px;
-  font-family: var(--font-mono); font-size: 28px; font-weight: 700;
+  font-family: var(--font-mono); font-size: 16px; font-weight: 700;
   color: var(--petroleum); border-right: 1px solid rgba(0,0,0,0.08);
   display: flex; align-items: center;
 }
